@@ -1,0 +1,272 @@
+------------------------------------------------ BACKEND (NODE JS) QUE-ANS ---------------------------------------------
+
+Q: What is Node.js?
+A: Node.js is a JavaScript runtime built on Chrome's V8 engine that allows developers to run JavaScript on the server side. It is event-driven, non-blocking, and designed for building scalable network applications.
+
+Q: What is Express.js?
+A: Express.js is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. It simplifies the development of server-side applications and APIs.
+
+Q: How do you create a simple server using Node.js and Express?
+A:
+
+javascript
+Copy code
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
+Q: What is MongoDB?
+A: MongoDB is a NoSQL, document-oriented database that stores data in flexible, JSON-like documents. It is designed for scalability and performance, making it suitable for handling large amounts of data.
+
+Q: How do you connect a Node.js application to a MongoDB database using Mongoose?
+A:
+
+javascript
+Copy code
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost:27017/mydatabase', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
+Q: What is Mongoose?
+A: Mongoose is an ODM (Object Data Modeling) library for MongoDB and Node.js. It provides a schema-based solution to model your application data, making it easier to work with MongoDB in a structured way.
+
+Q: How do you define a schema and a model in Mongoose?
+A:
+
+javascript
+Copy code
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const userSchema = new Schema({
+  name: String,
+  email: String,
+  password: String
+});
+
+const User = mongoose.model('User', userSchema);
+Q: How do you perform CRUD operations in MongoDB using Mongoose?
+A:
+
+Create:
+javascript
+Copy code
+const newUser = new User({ name: 'John', email: 'john@example.com', password: '123456' });
+newUser.save();
+Read:
+javascript
+Copy code
+User.find({}, (err, users) => {
+  if (err) console.log(err);
+  console.log(users);
+});
+Update:
+javascript
+Copy code
+User.findByIdAndUpdate(userId, { name: 'Jane' }, (err, user) => {
+  if (err) console.log(err);
+  console.log(user);
+});
+Delete:
+javascript
+Copy code
+User.findByIdAndDelete(userId, (err) => {
+  if (err) console.log(err);
+  console.log('User deleted');
+});
+Q: What is middleware in Express.js?
+A: Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. They can execute code, modify the request and response objects, end the request-response cycle, and call the next middleware function.
+
+Q: How do you use middleware in Express.js?
+A:
+
+javascript
+Copy code
+app.use((req, res, next) => {
+  console.log('Middleware function');
+  next();
+});
+Q: What is req.params in Express.js?
+A: req.params contains route parameters (named URL segments) captured from the URL. Example:
+
+javascript
+Copy code
+app.get('/user/:id', (req, res) => {
+  const userId = req.params.id;
+  res.send(`User ID: ${userId}`);
+});
+Q: What is req.query in Express.js?
+A: req.query contains query string parameters from the URL. Example:
+
+javascript
+Copy code
+app.get('/search', (req, res) => {
+  const query = req.query.q;
+  res.send(`Search query: ${query}`);
+});
+Q: What is req.body in Express.js?
+A: req.body contains the parsed body of the request, which is populated by body-parsing middleware such as body-parser.
+
+Q: How do you handle JSON data in Express.js?
+A:
+
+javascript
+Copy code
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
+app.post('/data', (req, res) => {
+  const data = req.body;
+  res.send(data);
+});
+Q: What is CORS and how do you handle it in Express.js?
+A: CORS (Cross-Origin Resource Sharing) is a mechanism to allow or restrict requested resources on a web server depending on where the HTTP request was initiated. You can handle CORS in Express.js using the cors middleware:
+
+javascript
+Copy code
+const cors = require('cors');
+app.use(cors());
+Q: How do you set up route parameters in Express.js?
+A: Route parameters are set up using the : syntax in route paths. Example:
+
+javascript
+Copy code
+app.get('/users/:userId/books/:bookId', (req, res) => {
+  const userId = req.params.userId;
+  const bookId = req.params.bookId;
+  res.send(`User ID: ${userId}, Book ID: ${bookId}`);
+});
+Q: What is express.Router and how do you use it?
+A: express.Router is a class to create modular, mountable route handlers. You can use it to create a modular route system in your application. Example:
+
+javascript
+Copy code
+const express = require('express');
+const router = express.Router();
+
+router.get('/users', (req, res) => {
+  res.send('User list');
+});
+
+app.use('/api', router);
+Q: What is the difference between app.use and app.get in Express.js?
+A: app.use is used to mount middleware functions or sub-apps on the specified path. app.get is used to define route handlers for GET requests on the specified path.
+
+Q: How do you serve static files in Express.js?
+A: Use the express.static middleware to serve static files. Example:
+
+javascript
+Copy code
+app.use(express.static('public'));
+Q: How do you handle errors in Express.js?
+A: Define an error-handling middleware function with four arguments. Example:
+
+javascript
+Copy code
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
+});
+Q: How do you use environment variables in a Node.js application?
+A: Use the dotenv package to load environment variables from a .env file into process.env. Example:
+
+javascript
+Copy code
+require('dotenv').config();
+const dbUri = process.env.DB_URI;
+Q: What is next() in Express.js?
+A: next() is a function that passes control to the next middleware function in the stack.
+
+Q: How do you implement user authentication in a Node.js application using Express and MongoDB?
+A: Implement user authentication using JWT (JSON Web Token) and middleware for protecting routes. Example:
+
+javascript
+Copy code
+const jwt = require('jsonwebtoken');
+
+function authenticateToken(req, res, next) {
+  const token = req.header('Authorization').split(' ')[1];
+  if (!token) return res.sendStatus(401);
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+    if (err) return res.sendStatus(403);
+    req.user = user;
+    next();
+  });
+}
+Q: How do you perform validation in a Node.js application using Express?
+A: Use the express-validator library to perform validation. Example:
+
+javascript
+Copy code
+const { body, validationResult } = require('express-validator');
+
+app.post('/user', [
+  body('email').isEmail(),
+  body('password').isLength({ min: 6 })
+], (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
+  }
+  // Create user
+});
+Q: How do you paginate results in a Node.js application using MongoDB?
+A: Use the limit and skip methods provided by Mongoose. Example:
+
+javascript
+Copy code
+app.get('/users', async (req, res) => {
+  const { page = 1, limit = 10 } = req.query;
+  const users = await User.find()
+    .limit(limit * 1)
+    .skip((page - 1) * limit)
+    .exec();
+  res.json(users);
+});
+Q: How do you handle file uploads in a Node.js application using Express?
+A: Use the multer middleware to handle file uploads. Example:
+
+javascript
+Copy code
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
+
+app.post('/upload', upload.single('file'), (req, res) => {
+  res.send('File uploaded');
+});
+Q: What is the purpose of the app.listen method in Express.js?
+A: The app.listen method binds and listens for connections on the specified host and port. It starts the server.
+
+Q: How do you structure a large Node.js application?
+A: Structure a large Node.js application by separating concerns into different modules, such as routes, controllers, services, and models. Example directory structure:
+
+diff
+Copy code
+- controllers/
+- models/
+- routes/
+- services/
+- app.js
+Q: How do you use async/await in Node.js?
+A: Use async functions and await expressions to handle asynchronous operations. Example:
+
+javascript
+Copy code
+app.get('/users', async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (err) {
+    res.status(500).send(err);
+  }
+});
+Q: What is the purpose of the cluster module in Node.js?
+A: The cluster module allows you to create child processes (workers) that share the same server port, enabling load balancing and better utilization of multi-core systems.

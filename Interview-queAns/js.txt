@@ -1,0 +1,138 @@
+------------------------------------------------ JS QUE-ANS ---------------------------------------------
+
+
+Q: What is JavaScript?
+A: JavaScript is a high-level, interpreted programming language that is commonly used to create interactive effects within web browsers.
+
+Q: What are the different data types in JavaScript?
+A: The primary data types in JavaScript are: Number, String, Boolean, Object, Null, Undefined, and Symbol.
+
+Q: What is the difference between let, const, and var?
+A: var is function-scoped, while let and const are block-scoped. const is used to declare constants, which cannot be reassigned. let is used for variables that can be reassigned.
+
+Q: What is hoisting in JavaScript?
+A: Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope. Only the declarations are hoisted, not the initializations.
+
+Q: What are closures in JavaScript?
+A: A closure is a function that retains access to its lexical scope, even when the function is executed outside that scope.
+
+Q: What is the difference between == and ===?
+A: == compares values for equality after performing type conversion, whereas === compares values and types without performing type conversion (strict equality).
+
+Q: How do you create an object in JavaScript?
+A: You can create an object using object literals, constructors, or the Object.create method. Example using object literal:
+
+javascript
+Copy code
+const obj = {
+  name: 'John',
+  age: 30
+};
+Q: What are promises in JavaScript?
+A: Promises are objects representing the eventual completion or failure of an asynchronous operation. They provide then, catch, and finally methods to handle the outcomes.
+
+Q: What is the purpose of the this keyword in JavaScript?
+A: The this keyword refers to the object that is currently executing the code. Its value depends on the context in which it is used.
+
+Q: What is event delegation?
+A: Event delegation is a technique of handling events efficiently by attaching a single event listener to a parent element instead of individual child elements.
+
+Q: What is the difference between null and undefined?
+A: null is an assignment value indicating the absence of any object value, while undefined means a variable has been declared but has not yet been assigned a value.
+
+Q: How do you check if an array contains a value in JavaScript?
+A: You can use the includes method. Example:
+
+javascript
+Copy code
+const arr = [1, 2, 3];
+arr.includes(2); // true
+Q: What is the difference between slice and splice?
+A: slice returns a shallow copy of a portion of an array into a new array, while splice changes the contents of an array by removing or replacing existing elements and/or adding new elements.
+
+Q: What are template literals in JavaScript?
+A: Template literals are enclosed by backticks (`) and allow embedded expressions, multi-line strings, and string interpolation using ${}.
+
+Q: What is the purpose of the map method in JavaScript arrays?
+A: The map method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+Q: How do you handle errors in JavaScript?
+A: Errors in JavaScript can be handled using try, catch, finally, and throw statements.
+
+Q: What is an Immediately Invoked Function Expression (IIFE)?
+A: An IIFE is a function that is executed immediately after its definition. Example:
+
+javascript
+Copy code
+(function() {
+  console.log('IIFE');
+})();
+Q: What is the purpose of async and await in JavaScript?
+A: async and await are used to handle asynchronous operations. async functions return a promise, and await is used to wait for a promise to resolve.
+
+Q: What is the fetch API in JavaScript?
+A: The fetch API provides an interface for fetching resources (including across the network). It returns a promise that resolves to the Response object representing the response to the request.
+
+Q: How do you deep clone an object in JavaScript?
+A: A common method to deep clone an object is to use JSON.parse and JSON.stringify, though this has limitations with functions and undefined properties:
+
+javascript
+Copy code
+const deepClone = obj => JSON.parse(JSON.stringify(obj));
+Q: What is debouncing in JavaScript?
+A: Debouncing is a technique to limit the rate at which a function is executed. It ensures that a function is only called once after a specified period has elapsed since the last time it was called.
+
+Q: What is the difference between call, apply, and bind?
+A: call and apply invoke a function with a specified this context. call accepts arguments separately, while apply accepts arguments as an array. bind returns a new function with a specified this context and arguments.
+
+Q: What are higher-order functions in JavaScript?
+A: Higher-order functions are functions that operate on other functions, either by taking them as arguments or by returning them.
+
+Q: How do you create a module in JavaScript?
+A: JavaScript modules can be created using the export and import statements. Example:
+
+javascript
+Copy code
+// module.js
+export const greet = () => 'Hello';
+
+// main.js
+import { greet } from './module.js';
+console.log(greet());
+Q: What is the event loop in JavaScript?
+A: The event loop is a mechanism that handles the execution of asynchronous callbacks. It continuously checks the call stack and the task queue, executing tasks in order.
+
+Q: What is a JavaScript promise chain?
+A: A promise chain is a sequence of promises, where each promise is returned from the previous then method. It allows for sequential asynchronous operations.
+
+Q: How do you prevent the default action of an event in JavaScript?
+A: Use the preventDefault method on the event object. Example:
+
+javascript
+Copy code
+document.querySelector('a').addEventListener('click', event => {
+  event.preventDefault();
+});
+Q: What is destructuring in JavaScript?
+A: Destructuring is a syntax for extracting values from arrays or properties from objects into distinct variables. Example:
+
+javascript
+Copy code
+const [a, b] = [1, 2];
+const { name, age } = { name: 'John', age: 30 };
+Q: What is the spread operator in JavaScript?
+A: The spread operator (...) allows an iterable (like an array or object) to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected. Example:
+
+javascript
+Copy code
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5];
+Q: How do you convert a string to a number in JavaScript?
+A: You can use Number(), parseInt(), parseFloat(), or the unary + operator. Example:
+
+javascript
+Copy code
+const num = Number('123');
+const num2 = parseInt('123');
+const num3 = parseFloat('123.45');
+const num4 = +'123';

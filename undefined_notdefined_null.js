@@ -29,3 +29,5 @@ console.log(a)
 const b = 'heyeee';
 // b = 'hello';  error cant be change
 console.log(b)
+
+console.log([] || null || undefined);

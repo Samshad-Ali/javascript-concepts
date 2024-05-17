@@ -1,0 +1,174 @@
+------------------------------------------------ CSS QUE-ANS ---------------------------------------------
+
+
+Q: What does CSS stand for?
+A: Cascading Style Sheets.
+
+Q: How do you include CSS in an HTML document?
+A: You can include CSS in an HTML document using inline styles, internal stylesheets, or external stylesheets. Inline styles use the style attribute, internal stylesheets use the <style> tag within the <head>, and external stylesheets link to a .css file using the <link> tag.
+
+Q: What is the difference between class selectors and ID selectors in CSS?
+A: Class selectors are defined with a period (.) and can be used multiple times on a page, while ID selectors are defined with a hash (#) and must be unique within a page.
+
+Q: What is the CSS box model?
+A: The CSS box model describes the rectangular boxes generated for elements, consisting of margins, borders, padding, and the actual content area.
+
+Q: How do you center a block element horizontally?
+A: To center a block element horizontally, you can use margin: auto and specify a width for the element. Example:
+
+css
+Copy code
+.centered {
+  width: 50%;
+  margin: 0 auto;
+}
+Q: What is the difference between padding and margin?
+A: Padding is the space between the content and the border of an element, while margin is the space between the border of an element and adjacent elements.
+
+Q: How do you apply multiple classes to an HTML element?
+A: You can apply multiple classes to an HTML element by separating them with a space. Example: <div class="class1 class2"></div>.
+
+Q: What is a CSS pseudo-class?
+A: A CSS pseudo-class is used to define a special state of an element, such as :hover, :focus, or :nth-child.
+
+Q: How do you select an element with a specific attribute in CSS?
+A: Use the attribute selector syntax. Example:
+
+css
+Copy code
+a[target="_blank"] {
+  color: red;
+}
+Q: What is the z-index property?
+A: The z-index property specifies the stack order of elements. Higher z-index values are placed in front of lower values.
+
+Q: How do you make a flex container in CSS?
+A: Use the display: flex property on the container element. Example:
+
+css
+Copy code
+.container {
+  display: flex;
+}
+Q: What is the purpose of the flex-direction property?
+A: The flex-direction property specifies the direction of the flex items within a flex container, such as row, row-reverse, column, or column-reverse.
+
+Q: How do you create a CSS grid container?
+A: Use the display: grid property on the container element. Example:
+
+css
+Copy code
+.container {
+  display: grid;
+}
+Q: What does the position property do in CSS?
+A: The position property specifies the positioning method for an element (static, relative, absolute, fixed, or sticky).
+
+Q: How do you make an element responsive using CSS?
+A: Use relative units like percentages, em, rem, and media queries to adjust styles based on viewport size.
+
+Q: What are CSS transitions?
+A: CSS transitions allow you to change property values smoothly over a given duration. Example:
+
+css
+Copy code
+.element {
+  transition: background-color 0.5s ease;
+}
+Q: What is the box-sizing property?
+A: The box-sizing property defines how the total width and height of an element are calculated (content-box or border-box).
+
+Q: How do you apply a shadow to an element in CSS?
+A: Use the box-shadow property. Example:
+
+css
+Copy code
+.element {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+Q: What is the difference between inline and block elements?
+A: Inline elements do not start on a new line and only take up as much width as necessary, while block elements start on a new line and take up the full width available.
+
+Q: How do you create a responsive layout with CSS Grid?
+A: Use the grid-template-columns property with relative units and media queries to adjust the grid layout based on the viewport size.
+
+Q: What are CSS variables and how do you use them?
+A: CSS variables (custom properties) are defined with -- and accessed with var(). Example:
+
+css
+Copy code
+:root {
+  --main-color: #3498db;
+}
+.element {
+  color: var(--main-color);
+}
+Q: What is a media query?
+A: A media query is used to apply styles based on the viewport or device characteristics, such as width, height, and orientation. Example:
+
+css
+Copy code
+@media (max-width: 600px) {
+  .element {
+    font-size: 14px;
+  }
+}
+Q: How do you change the text color of an element in CSS?
+A: Use the color property. Example:
+
+css
+Copy code
+.element {
+  color: blue;
+}
+Q: What is the difference between display: none and visibility: hidden?
+A: display: none removes the element from the document flow, while visibility: hidden hides the element but keeps it in the document flow.
+
+Q: How do you create an animation in CSS?
+A: Use the @keyframes rule to define the animation and the animation property to apply it to an element. Example:
+
+css
+Copy code
+@keyframes slidein {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+.element {
+  animation: slidein 2s ease-in-out;
+}
+Q: How do you make a rounded corner for an element in CSS?
+A: Use the border-radius property. Example:
+
+css
+Copy code
+.element {
+  border-radius: 10px;
+}
+Q: What is the float property used for in CSS?
+A: The float property is used to place an element to the left or right of its container, allowing text and inline elements to wrap around it.
+
+Q: How do you clear floats in CSS?
+A: Use the clear property or the clearfix hack. Example with clear:
+
+css
+Copy code
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+Q: What is the overflow property in CSS?
+A: The overflow property specifies how to handle content that overflows an element's box. Values include visible, hidden, scroll, and auto.
+
+Q: How do you make text bold in CSS?
+A: Use the font-weight property with a value of bold or a numeric value. Example:
+
+css
+Copy code
+.element {
+  font-weight: bold;
+}

@@ -1,0 +1,183 @@
+------------------------------------------------ NEXTJS QUE-ANS ---------------------------------------------
+
+Q: What is Next.js?
+A: Next.js is a React framework that enables server-side rendering and static site generation for React applications. It provides features like file-based routing, automatic code splitting, and API routes.
+
+Q: How do you create a new Next.js project?
+A: You can create a new Next.js project using the create-next-app CLI tool:
+
+bash
+Copy code
+npx create-next-app my-next-app
+Q: What is file-based routing in Next.js?
+A: File-based routing in Next.js means that the routing is based on the file structure in the pages directory. Each file in pages corresponds to a route in the application.
+
+Q: How do you create dynamic routes in Next.js?
+A: Dynamic routes are created by using square brackets in the file name within the pages directory. Example:
+
+bash
+Copy code
+pages/posts/[id].js
+This creates a dynamic route where id is a parameter.
+
+Q: What are the two main rendering methods in Next.js?
+A: The two main rendering methods are Server-Side Rendering (SSR) and Static Site Generation (SSG).
+
+Q: What is Server-Side Rendering (SSR) in Next.js?
+A: SSR means that the HTML is generated on the server for each request. This is achieved using the getServerSideProps function in a page component.
+
+Q: What is Static Site Generation (SSG) in Next.js?
+A: SSG means that the HTML is generated at build time and served as static files. This is achieved using the getStaticProps function in a page component.
+
+Q: What is the purpose of the getStaticProps function?
+A: The getStaticProps function is used to fetch data at build time for static generation. The data is passed as props to the page component.
+
+Q: What is the purpose of the getServerSideProps function?
+A: The getServerSideProps function is used to fetch data at request time for server-side rendering. The data is passed as props to the page component.
+
+Q: What is the getStaticPaths function used for?
+A: The getStaticPaths function is used in conjunction with getStaticProps to generate dynamic routes for static site generation. It defines which paths should be pre-rendered.
+
+Q: How do you create an API route in Next.js?
+A: API routes are created by adding files in the pages/api directory. Each file in this directory corresponds to an endpoint. Example:
+
+bash
+Copy code
+pages/api/hello.js
+javascript
+Copy code
+export default function handler(req, res) {
+  res.status(200).json({ message: 'Hello, world!' });
+}
+Q: What is Incremental Static Regeneration (ISR) in Next.js?
+A: ISR allows you to create or update static content after the site has been built and deployed. You can specify a revalidation time in seconds, and Next.js will re-generate the page in the background.
+
+Q: How do you enable Incremental Static Regeneration?
+A: You can enable ISR by returning a revalidate key from the getStaticProps function. Example:
+
+javascript
+Copy code
+export async function getStaticProps() {
+  return {
+    props: {
+      // data
+    },
+    revalidate: 10, // revalidate every 10 seconds
+  };
+}
+Q: What is a custom Document in Next.js?
+A: A custom Document allows you to modify the server-side rendered document markup, such as adding meta tags to the <head>. Create a custom document by extending the default Document in pages/_document.js.
+
+Q: What is a custom App in Next.js?
+A: A custom App allows you to override the default App component, which initializes pages. It can be used to add global styles or modify the page initialization. Create a custom app in pages/_app.js.
+
+Q: How do you add global CSS in a Next.js project?
+A: You can add global CSS by importing the CSS file in the custom App component (pages/_app.js). Example:
+
+javascript
+Copy code
+import '../styles/global.css';
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />;
+}
+
+export default MyApp;
+Q: How do you handle images in Next.js?
+A: Next.js provides an Image component that optimizes images for faster loading and better performance. Example:
+
+javascript
+Copy code
+import Image from 'next/image';
+
+function HomePage() {
+  return <Image src="/vercel.png" alt="Vercel Logo" width={500} height={500} />;
+}
+
+export default HomePage;
+Q: What is the next.config.js file used for?
+A: The next.config.js file is used to customize the Next.js configuration, such as setting up environment variables, custom webpack configuration, and enabling features like CSS modules.
+
+Q: How do you create redirects in Next.js?
+A: You can create redirects in the next.config.js file using the redirects function. Example:
+
+javascript
+Copy code
+module.exports = {
+  async redirects() {
+    return [
+      {
+        source: '/old-path',
+        destination: '/new-path',
+        permanent: true,
+      },
+    ];
+  },
+};
+Q: How do you create rewrites in Next.js?
+A: You can create rewrites in the next.config.js file using the rewrites function. Example:
+
+javascript
+Copy code
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/about',
+        destination: '/about-us',
+      },
+    ];
+  },
+};
+Q: How do you enable TypeScript in a Next.js project?
+A: Create a tsconfig.json file in the root of the project, and then run the Next.js development server. Next.js will automatically install the necessary TypeScript dependencies.
+
+Q: What is next/link used for?
+A: The next/link component is used to create client-side navigation between different pages in a Next.js application. It provides pre-fetching and optimized navigation.
+
+Q: How do you use environment variables in Next.js?
+A: Environment variables can be defined in a .env file and accessed using process.env. Example:
+
+bash
+Copy code
+NEXT_PUBLIC_API_URL=https://api.example.com
+javascript
+Copy code
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+Q: What is the useRouter hook?
+A: The useRouter hook from next/router is used to access the router object and perform navigation, access query parameters, and handle route changes.
+
+Q: What is the difference between getInitialProps and getStaticProps/getServerSideProps?
+A: getInitialProps is used in custom App and Document components and fetches data for both server and client. getStaticProps and getServerSideProps are specific to pages and handle static generation and server-side rendering respectively.
+
+Q: How do you add custom headers in Next.js?
+A: Custom headers can be added in the next.config.js file using the headers function. Example:
+
+javascript
+Copy code
+module.exports = {
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          {
+            key: 'X-Custom-Header',
+            value: 'My Custom Header',
+          },
+        ],
+      },
+    ];
+  },
+};
+Q: How do you implement custom error pages in Next.js?
+A: You can create custom error pages by adding 404.js and 500.js files in the pages directory.
+
+Q: What is Middleware in Next.js?
+A: Middleware allows you to run code before a request is completed. It can be used for tasks like authentication, redirects, and custom headers. Middleware is defined in the middleware.js file in the root directory.
+
+Q: How do you perform CSS-in-JS styling in Next.js?
+A: CSS-in-JS can be achieved using libraries like styled-components or @emotion. Next.js provides built-in support for styled-components.
+
+Q: How do you deploy a Next.js application?
+A: Next.js applications can be deployed to platforms like Vercel, which provides seamless integration. You can also deploy to other hosting providers by building the application and serving it with a Node.js server. Example for Vercel:

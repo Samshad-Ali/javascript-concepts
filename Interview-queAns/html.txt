@@ -1,0 +1,91 @@
+------------------------------------------------ HTML QUE-ANS ---------------------------------------------
+
+Q: What does HTML stand for?
+A: HyperText Markup Language.
+
+Q: What is the purpose of the <!DOCTYPE html> declaration?
+A: It specifies the document type and version of HTML being used, ensuring proper rendering and standards compliance by browsers.
+
+Q: How do you create a hyperlink in HTML?
+A: Use the <a> tag with the href attribute, e.g., <a href="https://example.com">Link</a>.
+
+Q: What is the difference between <div> and <span>?
+A: <div> is a block-level element used for larger content sections, while <span> is an inline element used for small portions of text.
+
+Q: What are HTML5 semantic elements? Give examples.
+A: Semantic elements clearly define the purpose of the content. Examples include <header>, <footer>, <article>, <section>, and <nav>.
+
+Q: How do you include an image in an HTML document?
+A: Use the <img> tag with the src attribute, e.g., <img src="image.jpg" alt="description">.
+
+Q: What is the purpose of the alt attribute in an <img> tag?
+A: It provides alternative text for an image if it cannot be displayed, aiding accessibility and SEO.
+
+Q: How do you create a table in HTML?
+A: Use <table> along with <tr> for table rows, <th> for table headers, and <td> for table data, e.g., <table><tr><th>Header</th></tr><tr><td>Data</td></tr></table>.
+
+Q: What is the use of the <form> tag in HTML?
+A: It is used to create an HTML form for user input, containing elements like <input>, <textarea>, and <button>.
+
+Q: How can you create a checkbox in HTML?
+A: Use the <input> tag with type="checkbox", e.g., <input type="checkbox" name="option1" value="value1">.
+
+Q: What is the difference between <input type="radio"> and <input type="checkbox">?
+A: Radio buttons allow only one selection within a group, whereas checkboxes allow multiple selections.
+
+Q: How do you embed a video in an HTML document?
+A: Use the <video> tag with src or nested <source> tags, e.g., <video controls><source src="movie.mp4" type="video/mp4"></video>.
+
+Q: What is the purpose of the <head> tag?
+A: It contains meta-information about the HTML document, such as title, meta tags, links to stylesheets, and scripts.
+
+Q: What is the use of the <meta> tag?
+A: It provides metadata about the HTML document, like character set, description, keywords, and viewport settings.
+
+Q: How do you include a CSS file in an HTML document?
+A: Use the <link> tag within the <head> section, e.g., <link rel="stylesheet" href="styles.css">.
+
+Q: What is the purpose of the target attribute in the <a> tag?
+A: It specifies where to open the linked document, e.g., _blank for a new tab or window, _self for the same frame.
+
+Q: How do you create a numbered list in HTML?
+A: Use the <ol> tag for ordered lists, with <li> tags for each list item, e.g., <ol><li>Item 1</li><li>Item 2</li></ol>.
+
+Q: What is the difference between <ol> and <ul>?
+A: <ol> creates an ordered (numbered) list, while <ul> creates an unordered (bulleted) list.
+
+Q: How do you create a dropdown list in HTML?
+A: Use the <select> tag with nested <option> tags, e.g., <select><option value="1">Option 1</option><option value="2">Option 2</option></select>.
+
+Q: What are HTML entities?
+A: Special characters in HTML, e.g., &amp; for &, &lt; for <, and &gt; for >.
+
+Q: How do you comment in HTML?
+A: Use <!-- comment -->.
+
+Q: How do you create a line break in HTML?
+A: Use the <br> tag.
+
+Q: What is the data-* attribute used for in HTML5?
+A: It allows you to embed custom data attributes on all HTML elements.
+
+Q: How do you specify the character encoding for an HTML document?
+A: Use the <meta> tag with charset attribute, e.g., <meta charset="UTF-8">.
+
+Q: How do you create a multi-line text input in an HTML form?
+A: Use the <textarea> tag, e.g., <textarea name="message"></textarea>.
+
+Q: What is the purpose of the action attribute in the <form> tag?
+A: It specifies the URL where the form data should be submitted.
+
+Q: How do you group form elements in HTML?
+A: Use the <fieldset> tag with a <legend> tag for the group label.
+
+Q: What is the use of the <label> tag in forms?
+A: It defines labels for form elements, improving accessibility and usability.
+
+Q: How do you create a navigation bar in HTML?
+A: Use the <nav> tag, containing <ul> and <li> tags with links, e.g., <nav><ul><li><a href="#home">Home</a></li></ul></nav>.
+
+Q: How can you embed a YouTube video in an HTML document?
+A: Use the <iframe> tag with the src attribute set to the video URL, e.g., <iframe width="560" height="315" src="https://www.youtube.com/embed/videoid" frameborder="0" allowfullscreen></iframe>.

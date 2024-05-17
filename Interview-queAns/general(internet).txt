@@ -1,0 +1,91 @@
+-------------------------------------- GENERAL (INTERNET & NETWORK) QUES-ANS -------------------------------
+
+Q: What is a domain name?
+A: A domain name is a human-readable address used to access websites, like example.com. It maps to an IP address where the website is hosted.
+
+Q: What is DNS and how does it work?
+A: DNS (Domain Name System) translates human-readable domain names into IP addresses. When you enter a domain name in a browser, a DNS server resolves it to the corresponding IP address to connect to the website.
+
+Q: What is an IP address?
+A: An IP address (Internet Protocol address) is a unique string of numbers separated by periods (IPv4) or colons (IPv6) that identifies each computer using the Internet Protocol to communicate over a network.
+
+Q: What is the difference between IPv4 and IPv6?
+A: IPv4 uses a 32-bit address format allowing for about 4.3 billion unique addresses. IPv6 uses a 128-bit address format, providing a vastly larger address space.
+
+Q: What is HTTP?
+A: HTTP (HyperText Transfer Protocol) is the protocol used for transmitting web pages over the internet. It defines how messages are formatted and transmitted, and how web servers and browsers should respond to various commands.
+
+Q: What is HTTPS?
+A: HTTPS (HyperText Transfer Protocol Secure) is an extension of HTTP that uses encryption (SSL/TLS) to secure the data transmitted between the client and server, ensuring data integrity and privacy.
+
+Q: What is a URL?
+A: A URL (Uniform Resource Locator) is the address of a resource on the internet. It includes the protocol (http/https), domain name, and path to the resource. Example: https://www.example.com/path/to/resource.
+
+Q: What is SSL/TLS?
+A: SSL (Secure Sockets Layer) and TLS (Transport Layer Security) are cryptographic protocols designed to provide secure communication over a computer network. TLS is the successor to SSL.
+
+Q: What is a firewall?
+A: A firewall is a network security device or software that monitors and controls incoming and outgoing network traffic based on predetermined security rules, acting as a barrier between trusted and untrusted networks.
+
+Q: What is a VPN?
+A: A VPN (Virtual Private Network) extends a private network across a public network, enabling users to send and receive data securely as if their devices were directly connected to the private network.
+
+Q: What is a router?
+A: A router is a networking device that forwards data packets between computer networks, directing traffic based on its IP address. It connects different networks, such as a local network to the internet.
+
+Q: What is a switch?
+A: A switch is a networking device that connects devices within a local area network (LAN) and uses MAC addresses to forward data to the correct destination.
+
+Q: What is an API?
+A: An API (Application Programming Interface) is a set of rules and definitions that allow applications to communicate with each other, enabling them to request and exchange data.
+
+Q: What is REST?
+A: REST (Representational State Transfer) is an architectural style for designing networked applications. It uses standard HTTP methods (GET, POST, PUT, DELETE) and is stateless, meaning each request from a client contains all the information needed to process the request.
+
+Q: What is JSON?
+A: JSON (JavaScript Object Notation) is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is commonly used in APIs to exchange data.
+
+Q: What is latency?
+A: Latency is the time it takes for a data packet to travel from the sender to the receiver. It is often measured in milliseconds and can affect the speed and performance of network applications.
+
+Q: What is bandwidth?
+A: Bandwidth is the maximum rate at which data can be transferred over a network connection, typically measured in bits per second (bps).
+
+Q: What is a proxy server?
+A: A proxy server acts as an intermediary between a client and a server. It can provide various functions, such as caching, filtering, and anonymizing requests.
+
+Q: What is a subnet?
+A: A subnet (subnetwork) is a logically visible subdivision of an IP network. Subnets help organize and manage IP addresses, improve network performance, and enhance security.
+
+Q: What is NAT?
+A: NAT (Network Address Translation) is a method used by routers to map private local addresses to a single public IP address, enabling multiple devices on a local network to access the internet using one IP address.
+
+Q: What is a MAC address?
+A: A MAC (Media Access Control) address is a unique identifier assigned to a network interface card (NIC) for communication on the physical network segment.
+
+Q: What is DNS caching?
+A: DNS caching stores DNS query results locally on a device or DNS server to reduce the time needed for subsequent lookups of the same domain name, improving speed and performance.
+
+Q: What is DHCP?
+A: DHCP (Dynamic Host Configuration Protocol) is a network management protocol used to dynamically assign IP addresses and other network configuration parameters to devices on a network.
+
+Q: What is the OSI model?
+A: The OSI (Open Systems Interconnection) model is a conceptual framework used to understand and implement network communication in seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application.
+
+Q: What is a CDN?
+A: A CDN (Content Delivery Network) is a network of distributed servers that deliver web content to users based on their geographic location, improving load times and reducing latency.
+
+Q: What is a socket?
+A: A socket is an endpoint for sending or receiving data across a computer network. It is associated with an IP address and port number.
+
+Q: What is TCP/IP?
+A: TCP/IP (Transmission Control Protocol/Internet Protocol) is a suite of communication protocols used to interconnect network devices on the internet. TCP ensures reliable data transmission, while IP handles addressing and routing.
+
+Q: What is port forwarding?
+A: Port forwarding is a technique used to redirect network traffic from one IP address and port number to another, often used to allow external devices to access services on a private network.
+
+Q: What is SSL certificate?
+A: An SSL certificate is a digital certificate that authenticates the identity of a website and enables an encrypted connection, ensuring data transmitted between the server and the client is secure.
+
+Q: What is packet switching?
+A: Packet switching is a method of data transmission where data is broken into small packets that are sent independently over the network and reassembled at the destination, optimizing network efficiency and reliability.
